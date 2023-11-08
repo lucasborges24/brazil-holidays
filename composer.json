@@ -1,0 +1,59 @@
+{
+    "name": "lucasborges24/brazil-holidays",
+    "description": "A php package to manage brazilian holidays",
+    "keywords": [
+        "lucasborges24",
+        "brazil-holidays"
+    ],
+    "homepage": "https://github.com/lucasborges24/brazil-holidays",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Lucas Borges Barbosa",
+            "email": "lucasborgesbarbosa2012@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^10.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0",
+        "pestphp/pest": "*",
+        "pestphp/pest-plugin-type-coverage": "^2.4",
+        "pestphp/pest-plugin-laravel": "^2.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lucasborges24\\BrazilHolidays\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lucasborges24\\BrazilHolidays\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --type-coverage"
+
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lucasborges24\\BrazilHolidays\\BrazilHolidaysServiceProvider"
+            ],
+            "aliases": {
+                "BrazilHolidays": "Lucasborges24\\BrazilHolidays\\BrazilHolidaysFacade"
+            }
+        }
+    }
+}
