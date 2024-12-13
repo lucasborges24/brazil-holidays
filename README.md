@@ -17,7 +17,7 @@ composer require lucasborges24/brazil-holidays
 ## Usage
 
 ```php
-// soon :)
+// soon :))
 ```
 
 ### Testing
